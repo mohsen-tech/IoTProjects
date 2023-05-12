@@ -8,7 +8,8 @@ const { response } = require('express');
 app.use(bodyParser.json());
 app.use(express.static('public'));
 
-mongoose.connect('mongodb+srv://mohsen_tech:mohsen0930@webprojectcluster.oipym.mongodb.net/DB_data?retryWrites=true&w=majority', {
+const dbConnectionUrl = ' ';
+mongoose.connect(dbConnectionUrl, {
     useNewUrlParser: true,
     useUnifiedTopology: true
 }).then(() => console.log('db connected!')).catch((err) => console.log(err));
